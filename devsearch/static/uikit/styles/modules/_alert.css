@@ -6,8 +6,7 @@
   padding: 1.5rem 2.5rem;
   border-radius: 3px;
   border: 1px solid var(--color-white-light);
-  margin-bottom: 1rem;
-  margin-right: 1rem;
+  margin: 0.5rem auto;
 }
 
 .alert,

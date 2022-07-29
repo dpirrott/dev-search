@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'images/icon.svg' %}" type="image/x-icon" />
     <!-- Icon - IconMonster -->
     <link
       rel="stylesheet"
@@ -21,13 +21,24 @@
     <title>DevSearch - Connect with Developers!</title>
   </head>
   <body>
-    {% include 'navbar.html' %} {% if messages %}
-    <ul>
+    {% include 'navbar.html' %}
+
+    {% if messages %}
+
       {% for message in messages %}
-      <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        <div class="alert alert--{{message.tags}}">
+          <p class="alert__message">{{message}}</p>
+          <button class="alert__close">x</button>
+        </div>
       {% endfor %}
-    </ul>
-    {% endif %} {% block content %} {% endblock content %}
+
+    {% endif %}
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <script src="{% static 'uikit/app.js' %}"></script>
     <p>FOOTER</p>
   </body>
 </html>
