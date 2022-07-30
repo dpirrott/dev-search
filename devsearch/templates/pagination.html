@@ -5,7 +5,7 @@
 
       {% if query_set.has_previous %}
 
-      <li><a class="btn page-link btn--sub" href="?page={{ query_set.previous_page_number }}">&#10094; Prev</a></li>
+      <li><a class="btn page-link btn--sub" href="?page={{ query_set.previous_page_number }}&search_query={{ search_query }}">&#10094; Prev</a></li>
 
       {% endif %}
 
@@ -13,16 +13,16 @@
 
         {% if page == query_set.number %}
 
-        <li><a class="btn page-link btn--sub" href="?page={{ page }}">{{ page }}</a></li>
+        <li><a class="btn page-link btn--sub" href="?page={{ page }}&search_query={{ search_query }}">{{ page }}</a></li>
         {% else %}
-        <li><a class="btn page-link" href="?page={{ page }}">{{ page }}</a></li>
+        <li><a class="btn page-link" href="?page={{ page }}&search_query={{ search_query }}">{{ page }}</a></li>
         {% endif %}
 
       {% endfor %}
 
       {% if query_set.has_next %}
 
-      <li><a class="btn page-link btn--sub" href="?page={{ query_set.next_page_number }}">Next &#10095;</a></li>
+      <li><a class="btn page-link btn--sub" href="?page={{ query_set.next_page_number }}&search_query={{ search_query }}">Next &#10095;</a></li>
 
       {% endif %}
 
