@@ -1,4 +1,7 @@
-{% extends 'main.html' %} {% block content %}
+{% extends 'main.html' %}
+
+{% block content %}
+
 <!-- Main Section -->
 <main class="home">
   <section class="hero-section text-center">
@@ -60,6 +63,5 @@
 </main>
 
 {% include 'pagination.html' with query_set=profiles custom_range=custom_range %}
-
 
 {% endblock content %}
