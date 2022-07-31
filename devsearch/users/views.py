@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import CustomUserCreationForm, ProfileForm, SkillForm, MessageForm
 from django.contrib.auth.models import User
 from .utils import paginateProfiles, searchProfiles, paginateProfiles
-from .models import Profile, Message
+from .models import Profile
 
 
 # Create your views here.
