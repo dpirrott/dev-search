@@ -40,7 +40,7 @@ class Project(models.Model):
         totalVotes = reviews.count()
 
         ratio = (upVotes / totalVotes) * 100
-        self.votes_total = totalVotes
+        self.vote_total = totalVotes
         self.vote_ratio = ratio
         self.save()
 
